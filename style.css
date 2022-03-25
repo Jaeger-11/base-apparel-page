@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans';
+}
+.logoDesk{
+    margin: 15px 0px 25px 10%;
+}
+section{
+    width: 100%;
+    height: 300px;
+    background-image: url(images/hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.megaBox{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.megaBox h1{
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: hsl(0, 6%, 24%);
+}
+
+.megaBox h1 span{
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+
+.megaBox p{
+    color: hsl(0, 36%, 70%);
+}
+
+form{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+input{
+    width: 85%;
+    height: 45px;
+    padding-left: 15px;
+    border-radius: 20px;
+    margin-left: 5%;
+    border: solid 1px hsl(0, 36%, 70%);
+    color: hsl(0, 6%, 24%);
+}
+
+input::placeholder{
+    color: hsl(0, 36%, 70%);
+}
+
+button{
+    height: 45px;
+    width: 80px;
+    border-radius: 30px;
+    position: relative;
+    left: -17%;
+    border: transparent 2px;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%)) ;
+}
+
+button:hover{
+    box-shadow: rgba(0, 0, 0, 0.6) 3px 5px 8px;
+    background-color: hsl(0, 80%, 86%);
+    background-image: none;
+    cursor: pointer;
+}
+
+.errorIcon{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    left: -18%;
+    top: 0.7rem;
+}
+
+.removeError{
+    display: none;
+}
+
+.message{
+    color: hsl(0, 93%, 68%);
+    margin-top: 5px
+}
+
+.warning{
+    border: 2px solid hsl(0, 93%, 68%);
+}
+
+.logoMob{
+    display: none;
+}
+
+
+@media screen and (min-width: 500px){
+    .hero{
+        /* background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%)); */
+        background: url(images/bg-pattern-desktop.svg);
+        background-size: contain;
+        background-color: hsl(0, 100%, 98%);
+        height: max-content;
+    }
+    .logoMob{
+        display: block;
+        margin-bottom: 20px;
+    }
+    .logoDesk{
+        display: none;
+    }
+    .hero{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        height: 100vh;
+        margin: auto;
+    }
+    .megaBox{
+        grid-column-start: 0;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        height: 90%;
+        margin: auto;
+        margin-left: 12%;
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .megaBox p{
+        width: 90%;
+    }
+    button{
+        width: 90px;
+    }
+    section{
+        width: 100%;
+        height: 100%;
+        background-image: url(images/hero-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .megaBox h1{
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    input{
+        margin-left: 0px;
+    }
+}
+
+@media screen and (min-width:1300px){
+    input{
+        width: 70%;
+    }
+    button{
+        left: -10%;
+    }
+    .errorIcon{
+        left: -12%;
+    }
+}
+
+@media screen and (max-height: 400px){
+    .megaBox h1{
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (min-height: 800px){
+    .megaBox h1{
+        font-size: 3.8rem;
+    }
+    .megaBox p{
+        font-size:  1.5rem;
+    }
+    .logoMob{
+        margin-bottom: 10%;
+    }
+}
